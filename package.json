@@ -21,7 +21,8 @@
     "compile": "tsc -p tsconfig.json",
     "prepublish": "npm run webpack-build",
     "prettier": "prettier",
-    "reformat": "npm run prettier -- --write . && npm run eslint --fix"
+    "reformat": "npm run prettier -- --write . && npm run eslint --fix",
+    "install": "npm run compile"
   },
   "devDependencies": {
     "@mongodb-js/eslint-config-mongosh": "^1.0.0",
