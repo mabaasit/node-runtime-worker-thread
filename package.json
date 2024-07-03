@@ -1,0 +1,46 @@
+{
+  "name": "node-runtime-worker-thread",
+  "version": "0.0.0-dev.0",
+  "description": "MongoDB shell runtime that lives in a worker thread",
+  "license": "Apache-2.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=14.15.1"
+  },
+  "scripts": {
+    "eslint": "eslint",
+    "lint": "npm run eslint . && npm run prettier -- --check .",
+    "check": "npm run lint && npm run depcheck",
+    "depcheck": "depcheck",
+    "webpack-build": "npm run compile && webpack --mode production",
+    "webpack-build-dev": "npm run compile && webpack --mode development",
+    "compile": "tsc -p tsconfig.json",
+    "prepublish": "npm run webpack-build",
+    "prettier": "prettier",
+    "reformat": "npm run prettier -- --write . && npm run eslint --fix"
+  },
+  "devDependencies": {
+    "@mongodb-js/eslint-config-mongosh": "^1.0.0",
+    "@mongodb-js/prettier-config-devtools": "^1.0.1",
+    "@mongodb-js/tsconfig-mongosh": "^1.0.0",
+    "@mongosh/browser-runtime-core": "0.0.0-dev.0",
+    "@mongosh/browser-runtime-electron": "0.0.0-dev.0",
+    "@mongosh/service-provider-core": "0.0.0-dev.0",
+    "@mongosh/service-provider-server": "0.0.0-dev.0",
+    "@mongosh/types": "0.0.0-dev.0",
+    "bson": "^6.7.0",
+    "depcheck": "^1.4.3",
+    "eslint": "^7.25.0",
+    "mocha": "^10.2.0",
+    "postmsg-rpc": "^2.4.0",
+    "prettier": "^2.8.8",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "system-ca": "^1.0.3"
+  }
+}
