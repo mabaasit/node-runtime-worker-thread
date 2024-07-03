@@ -20,8 +20,8 @@ module.exports = {
     alias: {
       // Stub out particularly large dependencies that are unnecessary and/or
       // only provide features that Node.js also provides out of the box.
-      browserslist: path.resolve(__dirname, '..', 'scripts', 'dummy-browserslist.js'),
-      tr46: path.resolve(__dirname, '..', 'scripts', 'tr46-stub.js'),
+      browserslist: path.resolve(__dirname, 'dummy-browserslist.js'),
+      tr46: path.resolve(__dirname, 'tr46-stub.js'),
     }
   },
 
