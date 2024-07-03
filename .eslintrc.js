@@ -1,10 +1,10 @@
-const { fixCygwinPath } = require('@mongodb-js/eslint-config-mongosh/utils');
+const config = require('./elsint-config-mongosh');
 
 module.exports = {
   root: true,
-  extends: ['@mongodb-js/eslint-config-mongosh'],
+  extends: [config],
   parserOptions: {
-    tsconfigRootDir: fixCygwinPath(__dirname),
+    tsconfigRootDir: config.fixCygwinPath(__dirname),
     project: ['./tsconfig-lint.json'],
   },
 };

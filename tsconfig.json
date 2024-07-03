@@ -1,6 +1,21 @@
 {
-  "extends": "@mongodb-js/tsconfig-mongosh/tsconfig.common.json",
   "compilerOptions": {
+    "esModuleInterop": true,
+    "downlevelIteration": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+
+    "declaration": true,
+    "removeComments": true,
+    "target": "es2018",
+    "lib": ["es2019"],
+    "module": "commonjs",
+    "moduleResolution": "node",
     "outDir": "./dist",
     "allowJs": true
   },
